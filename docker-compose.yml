@@ -1,0 +1,12 @@
+version: "2.1"
+services:
+  web:
+    build: .
+    image: "kiwinz_web_dev"
+    user: "1000:1000"
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+    command: "yarn start"
